@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 bg-success">
+    </div>
+    <div class="col-sm-8 bg-warning">
+      <p class="text-center">
+        <u>
+          <strong>Contact Us</strong>
+        </u>
+      </p>
+      <div class="row">
+        <div class="col-sm-6 bg-warning">
+          <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="Firstname" [ngModelOptions]="{standalone: true}">
+              </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="Lastname" [ngModelOptions]="{standalone: true}">
+              </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email id" [(ngModel)]="mailid" [ngModelOptions]="{standalone: true}">
+              </div>
+            <div class="form-group">
+              <label for="feedback">Feedback:</label>
+              <textarea class="form-control" id="feedback" rows="5"></textarea>
+            </div>
+            <button class="btn btn-default" data-popup-open="popup-sub" href="#">Submit</button>
+          </form>
+        </div>
+        <div class="col-sm-6 bg-warning">
+          <address>
+            <strong>No6, Vivekanadar illam
+            <br> Dubai kuruku theru
+            <br> Dubai Bustand-600 097
+            <br> +09658755644
+            <br> {{mail}}
+            </strong>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup" data-popup="popup-sub">
+    <div class="popup-inner">
+      <p class="text-align-justify font-weight-bold">Your First Name:{{Firstname}}<br> Your Last Name:{{Lastname}}<br> Your Email id: {{mailid}}<br> Thank you For Contacting Us</p>
+      <p class="center">
+        <a data-popup-close="popup-sub" href="#">Close</a>
+      </p>
+      <a class="popup-close" data-popup-close="popup-sub" href="#">x</a>
+    </div>
